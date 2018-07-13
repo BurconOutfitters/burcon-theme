@@ -3,11 +3,11 @@
  * Begin HTML output.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -93,7 +93,7 @@ class HTML {
      */
     public function loader() {
 
-        do_action( 'cct_loader' );
+        do_action( 'burcon_loader' );
 
     }
 
@@ -102,7 +102,7 @@ class HTML {
      */
     public function topbar() {
 
-        do_action( 'cct_topbar' );
+        do_action( 'burcon_topbar' );
 
     }
 
@@ -115,7 +115,7 @@ class HTML {
      */
     public function header() {
 
-        do_action( 'cct_header' );
+        do_action( 'burcon_header' );
 
     }
 

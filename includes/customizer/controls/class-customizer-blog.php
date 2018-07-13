@@ -3,7 +3,7 @@
  * Customizer blog controls.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
@@ -35,66 +35,66 @@ class Customizer_Blog {
         /**
 		 * Framework settings panel.
 		 */
-		$wp_customize->add_section( 'cct_customizer_blog', [
+		$wp_customize->add_section( 'burcon_customizer_blog', [
 			'priority'    => 35,
 			'capability'  => 'edit_theme_options',
-			'title'       => __( 'Blog & Archives', 'controlled-chaos' ),
-			'description' => __( 'Content and navigation archives.', 'controlled-chaos' )
+			'title'       => __( 'Blog & Archives', 'burcon-theme' ),
+			'description' => __( 'Content and navigation archives.', 'burcon-theme' )
         ] );
         
         // Blog content format.
-		$wp_customize->add_setting( 'cct_blog_content_format', [
+		$wp_customize->add_setting( 'burcon_blog_content_format', [
 			'default'	        => 'content',
-			'sanitize_callback' => 'cct_sanitize_blog_content_format'
+			'sanitize_callback' => 'burcon_sanitize_blog_content_format'
 		] );
 
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cct_blog_content_format', [
-			'section'     => 'cct_customizer_blog',
-			'settings'    => 'cct_blog_content_format',
-			'label'       => __( 'Blog Content', 'controlled-chaos' ),
-			'description' => __( 'Full content or excerpts', 'controlled-chaos' ),
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'burcon_blog_content_format', [
+			'section'     => 'burcon_customizer_blog',
+			'settings'    => 'burcon_blog_content_format',
+			'label'       => __( 'Blog Content', 'burcon-theme' ),
+			'description' => __( 'Full content or excerpts', 'burcon-theme' ),
 			'type'        => 'select',
 			'choices'     => [
-				'content' => __( 'Full Content', 'controlled-chaos' ),
-				'excerpt' => __( 'Excerpts', 'controlled-chaos' )
+				'content' => __( 'Full Content', 'burcon-theme' ),
+				'excerpt' => __( 'Excerpts', 'burcon-theme' )
 				]
 			]
 		) );
 		
 		// Archive content format.
-		$wp_customize->add_setting( 'cct_archive_content_format', [
+		$wp_customize->add_setting( 'burcon_archive_content_format', [
 			'default'	        => 'content',
-			'sanitize_callback' => 'cct_sanitize_archive_content_format'
+			'sanitize_callback' => 'burcon_sanitize_archive_content_format'
 		] );
 
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cct_archive_content_format', [
-			'section'     => 'cct_customizer_blog',
-			'settings'    => 'cct_archive_content_format',
-			'label'       => __( 'Archive Content', 'controlled-chaos' ),
-			'description' => __( 'Full content or excerpts', 'controlled-chaos' ),
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'burcon_archive_content_format', [
+			'section'     => 'burcon_customizer_blog',
+			'settings'    => 'burcon_archive_content_format',
+			'label'       => __( 'Archive Content', 'burcon-theme' ),
+			'description' => __( 'Full content or excerpts', 'burcon-theme' ),
 			'type'        => 'select',
 			'choices'     => [
-				'content' => __( 'Full Content', 'controlled-chaos' ),
-				'excerpt' => __( 'Excerpts', 'controlled-chaos' )
+				'content' => __( 'Full Content', 'burcon-theme' ),
+				'excerpt' => __( 'Excerpts', 'burcon-theme' )
 				]
 			]
         ) );
         
         // Blog/archive navigation format.
-		$wp_customize->add_setting( 'cct_blog_navigation_format', [
+		$wp_customize->add_setting( 'burcon_blog_navigation_format', [
 			'default'	        => 'standard',
-			'sanitize_callback' => 'cct_sanitize_blog_navigation_format'
+			'sanitize_callback' => 'burcon_sanitize_blog_navigation_format'
 		] );
 
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cct_blog_navigation_format', [
-			'section'     => 'cct_customizer_blog',
-			'settings'    => 'cct_blog_navigation_format',
-			'label'       => __( 'Blog Pages Navigation', 'controlled-chaos' ),
-			'description' => __( 'Next/previous links or page count.', 'controlled-chaos' ),
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'burcon_blog_navigation_format', [
+			'section'     => 'burcon_customizer_blog',
+			'settings'    => 'burcon_blog_navigation_format',
+			'label'       => __( 'Blog Pages Navigation', 'burcon-theme' ),
+			'description' => __( 'Next/previous links or page count.', 'burcon-theme' ),
 			'type'        => 'select',
 			'choices'     => [
-				'standard' => __( 'Next/Previous', 'controlled-chaos' ),
-				'numeric'  => __( 'Page Count', 'controlled-chaos' )
+				'standard' => __( 'Next/Previous', 'burcon-theme' ),
+				'numeric'  => __( 'Page Count', 'burcon-theme' )
 				]
 			]
 		) );

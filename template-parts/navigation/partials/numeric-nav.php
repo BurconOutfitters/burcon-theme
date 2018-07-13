@@ -3,11 +3,11 @@
  * Blog pages numeric navigation.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -58,7 +58,7 @@ if ( get_next_posts_link() ) {
 //	Link to first page, plus ellipses if necessary.
 if ( ! in_array( 1, $links ) ) {
     $class       = 1 == $paged ? ' class="active"' : '';
-    $first_link  = sprintf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( 1 ) ), esc_html( '1', 'controlled-chaos' ) );
+    $first_link  = sprintf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( 1 ) ), esc_html( '1', 'burcon-theme' ) );
 
     if ( ! in_array( 2, $links ) ) {
         $first_more = '<li>&hellip;</li>';
@@ -86,7 +86,7 @@ if ( ! in_array( $max, $links ) ) {
 } else {
     $last = null;
 }
-$label = apply_filters( 'cct_numeric_pagination_label', __( 'Page: ', 'controlled-chaos' ) ); ?>
+$label = apply_filters( 'burcon_numeric_pagination_label', __( 'Page: ', 'burcon-theme' ) ); ?>
 <nav class="numeric-pagination">
     <label class="numeric-pagination-label" for="numeric-pagination-list"><?php echo $label; ?></label>
     <ul id="numeric-pagination-list">

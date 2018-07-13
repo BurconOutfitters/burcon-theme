@@ -3,12 +3,12 @@
  * Additional footer scripts.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  *
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;

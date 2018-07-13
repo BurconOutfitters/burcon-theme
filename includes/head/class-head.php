@@ -1,19 +1,19 @@
 <?php
 /**
- * Controlled_Chaos head template.
+ * Burcon_Theme head template.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * Controlled_Chaos head template.
+ * Burcon_Theme head template.
  */
 class Head {
 

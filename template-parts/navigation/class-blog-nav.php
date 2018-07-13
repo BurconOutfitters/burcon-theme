@@ -3,11 +3,11 @@
  * Blog pages navigation.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -22,7 +22,7 @@ class Blog_Nav {
 	 */
 	public function __construct() {
 		
-		add_action( 'cct_before_footer', [ $this, 'nav' ], 20 );
+		add_action( 'burcon_before_footer', [ $this, 'nav' ], 20 );
 
 	}
 	
@@ -31,7 +31,7 @@ class Blog_Nav {
 	 */
 	public function nav() {
 
-		if ( 'numeric' == cct_sanitize_blog_navigation_format( get_theme_mod( 'cct_blog_navigation_format' ) ) ) {
+		if ( 'numeric' == burcon_sanitize_blog_navigation_format( get_theme_mod( 'burcon_blog_navigation_format' ) ) ) {
 			get_template_part( 'template-parts/navigation/partials/numeric-nav' );
 		} else {
 			get_template_part( 'template-parts/navigation/partials/posts-nav' );

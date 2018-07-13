@@ -3,13 +3,13 @@
  * Body element tag.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit; ?>
 
-<body <?php body_class(); ?> itemscope="itemscope" itemtype="<?php do_action( 'cct_body_schema' ); ?>">
+<body <?php body_class(); ?> itemscope="itemscope" itemtype="<?php do_action( 'burcon_body_schema' ); ?>">

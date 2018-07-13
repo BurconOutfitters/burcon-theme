@@ -3,11 +3,11 @@
  * Content HTML template.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -47,7 +47,7 @@ class Content {
             $partial = get_template_part( 'template-parts/content/partials/content', 'singular' );
         }
 
-        $content = apply_filters( 'cct_content_part', $partial );
+        $content = apply_filters( 'burcon_content_part', $partial );
         
         echo $content;
 

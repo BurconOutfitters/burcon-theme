@@ -3,7 +3,7 @@
  * Customizer blog controls.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Blog content format.
  */
-function cct_sanitize_blog_content_format( $input ) {
+function burcon_sanitize_blog_content_format( $input ) {
 
     $valid = [ 'content', 'excerpt' ];
 
@@ -27,7 +27,7 @@ function cct_sanitize_blog_content_format( $input ) {
 /**
  * Archive content format.
  */
-function cct_sanitize_archive_content_format( $input ) {
+function burcon_sanitize_archive_content_format( $input ) {
 
     $valid = [ 'content', 'excerpt' ];
 
@@ -41,7 +41,7 @@ function cct_sanitize_archive_content_format( $input ) {
 /**
  * Blog/archive navigation format.
  */
-function cct_sanitize_blog_navigation_format( $input ) {
+function burcon_sanitize_blog_navigation_format( $input ) {
 
     $valid = [ 'standard', 'numeric' ];
 

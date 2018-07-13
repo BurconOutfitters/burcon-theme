@@ -3,11 +3,11 @@
  * Footer HTML template.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Footer HTML template.
  */
-class Controlled_Chaos_Footer {
+class Burcon_Theme_Footer {
 
     /**
 	 * Constructor magic method.
@@ -48,4 +48,4 @@ class Controlled_Chaos_Footer {
 
 }
 
-$cct_footer = new Controlled_Chaos_Footer;
+$burcon_footer = new Burcon_Theme_Footer;

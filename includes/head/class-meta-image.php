@@ -3,16 +3,16 @@
  * Image meta tag.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class Controlled_Chaos_Meta_Image {
+class Burcon_Theme_Meta_Image {
 
 	/**
 	 * Constructor magic method.
@@ -47,5 +47,5 @@ class Controlled_Chaos_Meta_Image {
 
 }
 
-// Run the Controlled_Chaos_Meta_Image class.
-$controlled_chaos_meta_image = new Controlled_Chaos_Meta_Image;
+// Run the Burcon_Theme_Meta_Image class.
+$controlled_chaos_meta_image = new Burcon_Theme_Meta_Image;

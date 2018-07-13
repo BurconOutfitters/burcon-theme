@@ -3,15 +3,15 @@
  * Controlled Chaos Theme functions.
  *
  * @package    WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @author     Greg Sweet <greg@ccdzine.com>
  * @copyright  Copyright (c) 2017 - 2018, Greg Sweet
- * @link       https://github.com/ControlledChaos/controlled-chaos-theme
+ * @link       https://github.com/ControlledChaos/burcon-theme-theme
  * @license    http://www.gnu.org/licenses/gpl-3.0.html
  * @since      Controlled Chaos 1.0.0
  */
 
-namespace CCTheme\Functions;
+namespace Burcon_Theme\Functions;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -148,7 +148,7 @@ final class Functions {
 		 *
 		 * @since 1.0.0
 		 */
-		load_theme_textdomain( 'controlled-chaos' );
+		load_theme_textdomain( 'burcon-theme' );
 
 		/**
 		 * Add theme support.
@@ -194,7 +194,7 @@ final class Functions {
 		 */
 
 		// Default color choices.
-		$gutenberg_colors = apply_filters( 'cct_gutenberg_colors', [
+		$gutenberg_colors = apply_filters( 'burcon_gutenberg_colors', [
 			'#444',
 			'#eee',
 			'#23282d',
@@ -243,18 +243,18 @@ final class Functions {
 		 */
 
 		// 16:9 HD Video.
-		add_image_size( __( 'video', 'controlled-chaos' ), 1280, 720, true );
-		add_image_size( __( 'video-md', 'controlled-chaos' ), 960, 540, true );
-		add_image_size( __( 'video-sm', 'controlled-chaos' ), 640, 360, true );
+		add_image_size( __( 'video', 'burcon-theme' ), 1280, 720, true );
+		add_image_size( __( 'video-md', 'burcon-theme' ), 960, 540, true );
+		add_image_size( __( 'video-sm', 'burcon-theme' ), 640, 360, true );
 
 		// 21:9 Cinemascope.
-		add_image_size( __( 'banner', 'controlled-chaos' ), 1280, 549, true );
-		add_image_size( __( 'banner-md', 'controlled-chaos' ), 960, 411, true );
-		add_image_size( __( 'banner-sm', 'controlled-chaos' ), 640, 274, true );
+		add_image_size( __( 'banner', 'burcon-theme' ), 1280, 549, true );
+		add_image_size( __( 'banner-md', 'burcon-theme' ), 960, 411, true );
+		add_image_size( __( 'banner-sm', 'burcon-theme' ), 640, 274, true );
 
 		// Add image size for meta tags if companion plugin is not activated.
-		if ( ! is_plugin_active( 'controlled-chaos-plugin/controlled-chaos-plugin.php' ) ) {
-			add_image_size( __( 'Meta Image', 'controlled-chaos' ), 1200, 630, true );
+		if ( ! is_plugin_active( 'burcon-theme-plugin/burcon-theme-plugin.php' ) ) {
+			add_image_size( __( 'Meta Image', 'burcon-theme' ), 1200, 630, true );
 		}
 
 		// Header support.
@@ -276,10 +276,10 @@ final class Functions {
 
 		// Customizer logo upload support.
 		add_theme_support( 'custom-logo', [
-			'width'       => apply_filters( 'cct_logo_width', 180 ),
-			'height'      => apply_filters( 'cct_logo_height', 180 ),
-			'flex-width'  => apply_filters( 'cct_logo_flex_width', true ),
-			'flex-height' => apply_filters( 'cct_logo_flex_height', true )
+			'width'       => apply_filters( 'burcon_logo_width', 180 ),
+			'height'      => apply_filters( 'burcon_logo_height', 180 ),
+			'flex-width'  => apply_filters( 'burcon_logo_flex_width', true ),
+			'flex-height' => apply_filters( 'burcon_logo_flex_height', true )
 		 ] );
 
 		 /**
@@ -298,9 +298,9 @@ final class Functions {
 		 * @since  1.0.0
 		 */
 		register_nav_menus( [
-				'main'   => apply_filters( 'cct_main_menu_name', esc_html__( 'Main Menu', 'controlled-chaos' ) ),
-				'footer' => apply_filters( 'cct_footer_menu_name', esc_html__( 'Footer Menu', 'controlled-chaos' ) ),
-				'social' => apply_filters( 'cct_social_menu_name', esc_html__( 'Social Menu', 'controlled-chaos' ) )
+				'main'   => apply_filters( 'burcon_main_menu_name', esc_html__( 'Main Menu', 'burcon-theme' ) ),
+				'footer' => apply_filters( 'burcon_footer_menu_name', esc_html__( 'Footer Menu', 'burcon-theme' ) ),
+				'social' => apply_filters( 'burcon_social_menu_name', esc_html__( 'Social Menu', 'burcon-theme' ) )
 		] );
 
 		/**
@@ -308,7 +308,7 @@ final class Functions {
 		 *
 		 * @since 1.0.0
 		 */
-		add_editor_style( '/assets/css/editor-style.css', [ 'cct-admin' ], '', 'screen' );
+		add_editor_style( '/assets/css/editor-style.css', [ 'burcon-admin' ], '', 'screen' );
 
 		/**
 		 * Disable Jetpack open graph. We have the open graph tags in the theme.
@@ -348,8 +348,8 @@ final class Functions {
 		wp_enqueue_script( 'jquery' );
 
 		// HTML 5 support.
-		wp_enqueue_script( 'cct-html5',  get_theme_file_uri( '/assets/js/html5.min.js' ), [], '' );
-		wp_script_add_data( 'cct-html5', 'conditional', 'lt IE 9' );
+		wp_enqueue_script( 'burcon-html5',  get_theme_file_uri( '/assets/js/html5.min.js' ), [], '' );
+		wp_script_add_data( 'burcon-html5', 'conditional', 'lt IE 9' );
 
 		// Comments scripts.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -381,11 +381,11 @@ final class Functions {
 	public function frontend_styles() {
 
 		// Theme sylesheet.
-		wp_enqueue_style( 'cct-style',      get_stylesheet_uri(), [], '', 'screen' );
+		wp_enqueue_style( 'burcon-style',      get_stylesheet_uri(), [], '', 'screen' );
 
 		// Internet Explorer styles.
-		wp_enqueue_style( 'cct-ie8',        get_theme_file_uri( '/assets/css/ie8.css' ), [], '', 'screen' );
-		wp_style_add_data( 'cct-ie8', 'conditional', 'lt IE 9' );
+		wp_enqueue_style( 'burcon-ie8',        get_theme_file_uri( '/assets/css/ie8.css' ), [], '', 'screen' );
+		wp_style_add_data( 'burcon-ie8', 'conditional', 'lt IE 9' );
 
 		/**
 		 * Check if we and/or Google are online. If so, get Google fonts
@@ -394,18 +394,18 @@ final class Functions {
 		$google = checkdnsrr( 'google.com' );
 
 		if ( $google ) {
-			wp_enqueue_style( 'cct-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Code+Pro:200,300,400,500,600,700,900', [], '', 'screen' );
+			wp_enqueue_style( 'burcon-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Source+Code+Pro:200,300,400,500,600,700,900', [], '', 'screen' );
 		} else {
-			wp_enqueue_style( 'cct-sans',  get_theme_file_uri( '/assets/fonts/open-sans/open-sans.min.css' ), [], '', 'screen' );
-			wp_enqueue_style( 'cct-serif', get_theme_file_uri( '/assets/fonts/merriweather/merriweather.min.css' ), [], '', 'screen' );
-			wp_enqueue_style( 'cct-code',  get_theme_file_uri( '/assets/fonts/source-code-pro/source-code-pro.min.css' ), [], '', 'screen' );
+			wp_enqueue_style( 'burcon-sans',  get_theme_file_uri( '/assets/fonts/open-sans/open-sans.min.css' ), [], '', 'screen' );
+			wp_enqueue_style( 'burcon-serif', get_theme_file_uri( '/assets/fonts/merriweather/merriweather.min.css' ), [], '', 'screen' );
+			wp_enqueue_style( 'burcon-code',  get_theme_file_uri( '/assets/fonts/source-code-pro/source-code-pro.min.css' ), [], '', 'screen' );
 		}
 
 		// Media and supports queries.
-		wp_enqueue_style( 'cct-queries',   get_theme_file_uri( '/queries.css' ), [], '', 'screen' );
+		wp_enqueue_style( 'burcon-queries',   get_theme_file_uri( '/queries.css' ), [], '', 'screen' );
 
 		// Print styles.
-		wp_enqueue_style( 'cct-print',     get_theme_file_uri( '/assets/css/print.css' ), [], '', 'print' );
+		wp_enqueue_style( 'burcon-print',     get_theme_file_uri( '/assets/css/print.css' ), [], '', 'print' );
 
 	}
 

@@ -3,12 +3,12 @@
  * Footer content, scripts and end HTML output.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  *
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -21,13 +21,13 @@ class Footer {
 	public function __construct() {
 
         // Open hook.
-        do_action( 'cct_before_footer' );
+        do_action( 'burcon_before_footer' );
 
         // Get footer HTML output.
         $this->footer();
 
         // Open hook.
-        do_action( 'cct_after_footer' );
+        do_action( 'burcon_after_footer' );
 
         // Get additional footer scripts.
         $this->scripts();

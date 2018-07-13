@@ -3,13 +3,13 @@
  * Header closing tags and after header actions.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit; ?>
 </header>
-<?php do_action( 'cct_after_header' ); ?>
+<?php do_action( 'burcon_after_header' ); ?>

@@ -3,10 +3,10 @@
  * Content index class.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since Controlled Chaos 1.0.0
  */
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -22,7 +22,7 @@ class Index {
 		get_header();
 
 		// Extensibility hook.
-		do_action( 'cct_before_post' );
+		do_action( 'burcon_before_post' );
 
 		/**
 		 * Run class for sidebars and widget areas.
@@ -35,7 +35,7 @@ class Index {
 		require get_theme_file_path( '/template-parts/content/content.php' );
 
 		// Extensibility hook.
-		do_action( 'cct_after_post' );
+		do_action( 'burcon_after_post' );
 
 		// Load scripts and close HTML.
 		get_footer();

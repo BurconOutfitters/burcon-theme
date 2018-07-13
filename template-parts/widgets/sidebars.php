@@ -3,11 +3,11 @@
  * Sidebar HTML and widget output.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -23,10 +23,10 @@ class Sidebar_Widgets {
 	public function __construct() {
 
         // Add primary sidebar.
-        add_action( 'cct_content_aside', [ $this, 'primary' ], 20 );
+        add_action( 'burcon_content_aside', [ $this, 'primary' ], 20 );
 
         // Add primary sidebar.
-        add_action( 'cct_content_aside', [ $this, 'secondary' ], 21 );
+        add_action( 'burcon_content_aside', [ $this, 'secondary' ], 21 );
 
     }
 

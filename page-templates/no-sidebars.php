@@ -7,10 +7,10 @@
  * Description: Does not load the primary or secondary sidebars.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since Controlled Chaos 1.0.0
  */
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -26,10 +26,10 @@ class No_Sidebars {
 		get_header();
 		
 		// Add a page content wrapper.
-		add_action( 'cct_before_post', [ $this, 'open_wrapper' ] );
+		add_action( 'burcon_before_post', [ $this, 'open_wrapper' ] );
 
 		// Page content wrapper hook.
-		do_action( 'cct_before_post' );
+		do_action( 'burcon_before_post' );
 
 		/**
 		 * The get_siderbar function is still needed for other widget areas.
@@ -60,10 +60,10 @@ class No_Sidebars {
 		}
 		
 		// End the page content wrapper.
-		add_action( 'cct_after_post', [ $this, 'close_wrapper' ] );
+		add_action( 'burcon_after_post', [ $this, 'close_wrapper' ] );
 
 		// End page content wrapper hook.
-		do_action( 'cct_after_post' );
+		do_action( 'burcon_after_post' );
 
 		// Load scripts and close HTML.
 		get_footer();

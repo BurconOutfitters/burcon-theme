@@ -3,11 +3,11 @@
  * Post comments form status.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Post comments form status.
  */
-class Controlled_Chaos_Comments_Status {
+class Burcon_Theme_Comments_Status {
 
     /**
 	 * Constructor magic method.
@@ -37,7 +37,7 @@ class Controlled_Chaos_Comments_Status {
      */
     public static function none() {
 
-        $comments_none = apply_filters( 'cct_comments_none', sprintf( '<p class="comments-none-closed"><span class="comments-none">%1s</span></p>', __( 'Be the first to comment!', 'controlled-chaos' ) ) );
+        $comments_none = apply_filters( 'burcon_comments_none', sprintf( '<p class="comments-none-closed"><span class="comments-none">%1s</span></p>', __( 'Be the first to comment!', 'burcon-theme' ) ) );
 
         return $comments_none;
 
@@ -50,7 +50,7 @@ class Controlled_Chaos_Comments_Status {
      */
     public static function closed() {
 
-        $comments_closed = apply_filters( 'cct_comments_closed', sprintf( '<p class="comments-none-closed"><span class="comments-closed">%1s</span>.</p>', __( 'Comments are closed for this post', 'controlled-chaos' ) ) );
+        $comments_closed = apply_filters( 'burcon_comments_closed', sprintf( '<p class="comments-none-closed"><span class="comments-closed">%1s</span>.</p>', __( 'Comments are closed for this post', 'burcon-theme' ) ) );
 
         return $comments_closed;
 
@@ -58,4 +58,4 @@ class Controlled_Chaos_Comments_Status {
 
 }
 
-$controlled_chaos_comments_status = new Controlled_Chaos_Comments_Status;
+$controlled_chaos_comments_status = new Burcon_Theme_Comments_Status;

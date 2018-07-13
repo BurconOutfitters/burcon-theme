@@ -3,11 +3,11 @@
  * Template filters.
  *
  * @package WordPress
- * @subpackage Controlled_Chaos
+ * @subpackage Burcon_Theme
  * @since  1.0.0
  */
 
-namespace CCTheme;
+namespace Burcon_Theme;
 
 // Restrict direct access
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -34,14 +34,14 @@ class Template_Filters {
         global $_wp_additional_image_sizes;
 
 		$sizes = [
-			'thumbnail' => esc_html__( 'Thumbnail', 'controlled-chaos' ),
-			'medium'    => esc_html__( 'Medium', 'controlled-chaos' ),
-            'large'     => esc_html__( 'Large', 'controlled-chaos' ),
-            'banner'    => esc_html__( 'Banner', 'controlled-chaos' ),
-            'video'     => esc_html__( 'HD Video', 'controlled-chaos' )
+			'thumbnail' => esc_html__( 'Thumbnail', 'burcon-theme' ),
+			'medium'    => esc_html__( 'Medium', 'burcon-theme' ),
+            'large'     => esc_html__( 'Large', 'burcon-theme' ),
+            'banner'    => esc_html__( 'Banner', 'burcon-theme' ),
+            'video'     => esc_html__( 'HD Video', 'burcon-theme' )
 		];
 
-		$insert_sizes = apply_filters( 'cct_insert_image_sizes', $sizes );
+		$insert_sizes = apply_filters( 'burcon_insert_image_sizes', $sizes );
 		return $insert_sizes;
 
     }
