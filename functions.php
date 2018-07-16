@@ -58,7 +58,7 @@ final class Functions {
 
 	/**
 	 * Constructor magic method.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
@@ -67,7 +67,7 @@ final class Functions {
 
 	/**
 	 * Hooks and filters.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
@@ -106,7 +106,7 @@ final class Functions {
 
 	/**
 	 * Hooks and filters.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
@@ -123,7 +123,7 @@ final class Functions {
 
 	/**
 	 * Replace 'no-js' class with 'js' in the <html> element when JavaScript is detected.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @return string
@@ -276,10 +276,10 @@ final class Functions {
 
 		// Customizer logo upload support.
 		add_theme_support( 'custom-logo', [
-			'width'       => apply_filters( 'burcon_logo_width', 180 ),
-			'height'      => apply_filters( 'burcon_logo_height', 180 ),
-			'flex-width'  => apply_filters( 'burcon_logo_flex_width', true ),
-			'flex-height' => apply_filters( 'burcon_logo_flex_height', true )
+			'width'       => apply_filters( 'burcon_logo_width', 240 ),
+			'height'      => apply_filters( 'burcon_logo_height', 240 ),
+			'flex-width'  => apply_filters( 'burcon_logo_flex_width', false ),
+			'flex-height' => apply_filters( 'burcon_logo_flex_height', false )
 		 ] );
 
 		 /**
@@ -294,7 +294,7 @@ final class Functions {
 
 		/**
 		 * Register theme menus.
-		 * 
+		 *
 		 * @since  1.0.0
 		 */
 		register_nav_menus( [
@@ -415,10 +415,23 @@ final class Functions {
 	 * @since  1.0.0
 	 * @access public
 	 * @return void
+	 *
+	 * @todo   Move the .css file and change the directory.
 	 */
 	public function admin_styles() {
 
+		// Enqueue the global styles for this and child themes.
+		wp_enqueue_style( 'burcon-admin',   get_theme_file_uri( '/assets/scss/admin/admin.css' ), [], '', 'screen' );
 
+		// Enqueue styles specific to the parent theme.
+		if ( ! is_child_theme() ) {
+			wp_enqueue_style( 'burcon-colors',   get_parent_theme_file_uri( '/assets/scss/admin/colors.css' ), [], '', 'screen' );
+		}
+
+		// Enqueue styles specific to the active child theme.
+		if ( is_child_theme() ) {
+			wp_enqueue_style( 'burcon-child-colors',   get_theme_file_uri( '/assets/scss/admin/colors.css' ), [], '', 'screen' );
+		}
 
 	}
 
@@ -473,7 +486,7 @@ final class Functions {
 
 /**
  * Gets the instance of the Functions class.
- * 
+ *
  * This function is useful for quickly grabbing data
  * used throughout the theme.
  *

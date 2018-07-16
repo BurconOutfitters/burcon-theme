@@ -1,0 +1,108 @@
+#adminmenuback {
+	background-color: inherit;
+}
+
+#adminmenuwrap {
+	background-color: inherit;
+}
+
+#adminmenu {
+	background-color: inherit;
+
+	.wp-submenu-head {
+		font-size: 0.925em;
+	}
+
+	.wp-has-current-submenu {
+
+		.wp-submenu {
+			background-color: inherit;
+
+			a {
+				color: #222;
+			}
+		}
+	}
+
+	a {
+		color: #222;
+
+		&.menu-top {
+			padding-left:0.5em;
+			font-size: 0.925em;
+		}
+	}
+
+	div.wp-menu-image {
+		float: right;
+		display: none;
+
+		&:before {
+			color: #666;
+		}
+	}
+
+	.wp-has-current-submenu .wp-submenu .wp-submenu-head,
+	.wp-menu-arrow,
+	.wp-menu-arrow div,
+	li.current a.menu-top,
+	li.wp-has-current-submenu a.wp-has-current-submenu {
+		background: inherit;
+		color: #666;
+		font-size: 1.075em;
+		font-weight: bold;
+		font-weight: 600;
+	}
+
+	.opensub .wp-submenu li.current a,
+	.wp-submenu li.current,
+	.wp-submenu li.current a,
+	.wp-submenu li.current a:focus,
+	.wp-submenu li.current a:hover,
+	a.wp-has-current-submenu:focus + .wp-submenu li.current a {
+		color: #222;
+	}
+
+	li.menu-top:hover,
+	li.opensub > a.menu-top,
+	li > a.menu-top:focus {
+		position: relative;
+		background-color: inherit;
+		color: #222;
+	}
+
+}
+
+/* Menu collapse and expand. */
+#collapse-button {
+	    font-size: 0.85em;
+}
+
+.folded #adminmenu li.current.menu-top,
+.folded #adminmenu li.wp-has-current-submenu {
+	background: inherit;
+	color: #666;
+	font-size: 1.075em;
+	font-weight: bold;
+	font-weight: 600;
+}
+
+ul#adminmenu {
+
+	a.wp-has-current-submenu {
+
+		&:after {
+			display: none;
+		}
+	}
+
+	> li.current {
+
+		> a.current {
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

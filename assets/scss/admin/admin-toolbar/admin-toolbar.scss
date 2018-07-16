@@ -1,0 +1,31 @@
+#wpadminbar {
+	background: #eee;
+
+	.wp-has-current-submenu {
+
+		.wp-submenu {
+			background: inherit;
+
+			&.sub-open {
+				background: inherit;
+			}
+		}
+
+		&.opensub {
+
+			.wp-submenu {
+				background: inherit;
+			}
+		}
+	}
+
+	a {
+
+		&.wp-has-current-submenu {
+
+			&:focus + .wp-submenu {
+				background: inherit;
+			}
+		}
+	}
+}

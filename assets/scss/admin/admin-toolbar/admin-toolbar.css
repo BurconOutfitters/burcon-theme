@@ -1,0 +1,19 @@
+#wpadminbar {
+  background: #eee;
+}
+
+#wpadminbar .wp-has-current-submenu .wp-submenu {
+  background: inherit;
+}
+
+#wpadminbar .wp-has-current-submenu .wp-submenu.sub-open {
+  background: inherit;
+}
+
+#wpadminbar .wp-has-current-submenu.opensub .wp-submenu {
+  background: inherit;
+}
+
+#wpadminbar a.wp-has-current-submenu:focus + .wp-submenu {
+  background: inherit;
+}
