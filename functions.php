@@ -1,14 +1,16 @@
 <?php
 /**
- * Controlled Chaos Theme functions.
+ * Burcon Outfitters Theme functions.
  *
  * @package    WordPress
  * @subpackage Burcon_Theme
+ *
+ * @since      1.0.0
  * @author     Greg Sweet <greg@ccdzine.com>
  * @copyright  Copyright (c) 2017 - 2018, Greg Sweet
+ *
  * @link       https://github.com/ControlledChaos/burcon-theme-theme
  * @license    http://www.gnu.org/licenses/gpl-3.0.html
- * @since      Controlled Chaos 1.0.0
  */
 
 namespace Burcon_Theme\Functions;
@@ -20,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 /**
- * Controlled Chaos functions class.
+ * Burcon Outfitters functions class.
  *
  * @since  1.0.0
  * @access public
@@ -77,7 +79,7 @@ final class Functions {
 		// Swap html 'no-js' class with 'js'.
 		add_action( 'wp_head', [ $this, 'js_detect' ], 0 );
 
-		// Controlled Chaos theme setup.
+		// Burcon Outfitters theme setup.
 		add_action( 'after_setup_theme', [ $this, 'setup' ] );
 
 		// Remove unpopular meta tags.

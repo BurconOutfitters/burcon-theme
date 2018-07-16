@@ -35,12 +35,12 @@
 # WIDTH QUERIES
 --------------------------------------------------------------*/
 
-/* Equal or less than Controlled Chaos default width */
+/* Equal or less than Burcon Outfitters default width */
 @media screen and (max-width: 1280px) {
 	/* Styles */
 }
 
-/* Greater than Controlled Chaos default width */
+/* Greater than Burcon Outfitters default width */
 @media screen and (min-width: 1281px) {
 	/* Styles */
 }

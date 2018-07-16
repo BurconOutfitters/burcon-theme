@@ -15,4 +15,4 @@ A style guide will be published here as time permits.
 
 ### Credits
 
-All Burcon Outfitters repositories created and maintained by [Controlled Chaos Design](https://github.com/ControlledChaos).
+All Burcon Outfitters repositories created and maintained by [Burcon Outfitters Design](https://github.com/ControlledChaos).
